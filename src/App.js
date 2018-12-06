@@ -1,4 +1,10 @@
-import React from 'react';
+import React, { Component, Fragment, } from 'react';
+import { Route, Switch, } from 'react-router-dom';
+import { Container, } from 'semantic-ui-react';
+import Home from './Components/Home'
+import About from './Components/About';
+import NoMatch from './Components/NoMatch';
+import Navbar from './Components/Navbar';
 import CardForm from './Components/CardForm';
 import './Styles/App.scss';
 import CardList from './Components/CardList';
@@ -8,8 +14,8 @@ class App extends React.Component {
     cards: [],
     menuOpen: false,
     currentCard: 0,
-    flipped: false
-  }
+    flipped: false,
+  };
 
   // TOGGLE NEW CARD MENU
   toggleMenu = () => {
@@ -119,9 +125,8 @@ class App extends React.Component {
           deleteCard = {this.deleteCard}
         />
       </>
-    );
+    )
   }
-}
-
+};
 
 export default App;
